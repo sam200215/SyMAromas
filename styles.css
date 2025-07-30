@@ -1,0 +1,205 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fdfdfd;
+  color: #333;
+}
+
+header {
+  background: linear-gradient(to right, #ffffff, #f0f0f0); /* Corregido el gradiente */
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra agregada */
+}
+
+
+header h1 {
+  font-size: 3rem; /* tamaño grande */
+  margin: 0;
+  color: #333;
+}
+
+header p {
+  font-size: 1.2rem;
+  color: #666;
+  margin: 5px 0 0 0;
+}
+
+header span#cart-count {
+  background: red;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 0.8rem;
+  position: absolute;
+  top: -10px;
+  right: -10px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.card {
+  background-color: white;
+  border: 1px solid #e0e0e0;
+  padding: 1rem;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.card img {
+  width: 100%;
+  height: 220px;         /* Tamaño fijo: mediano-grande */
+  object-fit: cover;     /* Recorta la imagen para llenar el espacio */
+  border-radius: 6px;
+}
+
+
+.details {
+  padding: 2rem;
+  max-width: 600px;
+  margin: auto;
+}
+
+.details img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+}
+
+.hidden {
+  display: none;
+}
+
+.btn,
+.btn-outline {
+  padding: 0.75rem 1.2rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+  text-decoration: none;
+  text-align: center;
+  font-weight: bold;
+  font-size: 0.95rem;
+  transition: background-color 0.2s ease;
+}
+
+.btn {
+  background-color: #28a745;
+  color: white;
+}
+
+.btn:hover {
+  background-color: #218838;
+}
+
+.btn-outline {
+  background-color: transparent;
+  border: 2px solid #28a745;
+  color: #28a745;
+}
+
+.btn-outline:hover {
+  background-color: #e6f5ec;
+}
+
+.btn-group {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+#cart-view {
+  position: fixed;
+  top: 80px;
+  right: 20px;
+  background: white;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  padding: 1.2rem;
+  width: 280px;
+  z-index: 1000;
+  border-radius: 12px;
+  transition: opacity 0.3s ease;
+  animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+#cart-view.hidden {
+  display: none;
+}
+
+#cart-view h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+#cart-items {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem 0;
+}
+
+#cart-items li {
+  margin-bottom: 0.7rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px dashed #ccc;
+  padding-bottom: 4px;
+}
+
+#cart-items button {
+  background: transparent;
+  border: none;
+  color: red;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.cart .btn,
+.cart .btn-outline {
+  display: block;
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+footer {
+  padding: 1rem;
+  text-align: center;
+  background-color: #f2f2f2;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: #666;
+}

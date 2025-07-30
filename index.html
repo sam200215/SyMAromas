@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>S&A Aromas</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <div>
+      <h1>S&A Aromas</h1>
+      <p>pequeños frascos, grandes aromas</p>
+    </div>
+    <div style="position: relative; cursor: pointer;" onclick="toggleCart()">
+      🛒 <span id="cart-count">0</span>
+    </div>
+  </header>
+
+  <div class="grid" id="product-grid"></div>
+
+  <div class="details hidden" id="detail-view">
+    <img id="detail-image" src="" alt="" />
+    <h2 id="detail-title"></h2>
+    <p><strong>Notas principales:</strong> <span id="detail-notas"></span></p>
+    <p><strong>Recomendaciones:</strong> <span id="detail-clima"></span></p>
+    <p><strong>Presentación:</strong> <span id="detail-presentacion"></span></p>
+    <p><strong>Selecciona cantidad:</strong></p>
+    <div>
+      <label><input type="radio" name="ml" value="5ml" checked /> 5ml</label>
+      <label><input type="radio" name="ml" value="10ml" /> 10ml</label>
+    </div>
+    <div class="btn-group">
+      <button class="btn-outline" onclick="hideDetails()">Volver</button>
+      <button class="btn" onclick="addToCart()">Agregar al carrito</button>
+      <!-- WhatsApp button eliminado de aquí -->
+    </div>
+  </div>
+
+  <div class="cart hidden" id="cart-view">
+    <h2>Tu carrito</h2>
+    <ul id="cart-items"></ul>
+    <div class="btn-group">
+      <button class="btn-outline" onclick="toggleCart()">Cerrar</button>
+      <a class="btn" id="whatsapp-cart-btn" href="#" target="_blank">Enviar pedido por WhatsApp</a>
+    </div>
+  </div>
+
+  <footer>
+    © 2025 S&A Aromas. Todos los derechos reservados.
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
